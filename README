@@ -1,5 +1,4 @@
-Use this repo with nix to easily create a shell containing GHC, `cabal` and related
-tools (so far, just `cabal2nix`) easily.
+Use this repo with nix to easily create a shell containing GHC, `cabal`, `ghcid` and `cabal2nix`.
 
 # Usage
 
@@ -11,10 +10,12 @@ Assuming this repo is hosted at https://github.com/m4dc4p/haskell-shell, you can
 ## GHC 9.4
 `nix develop m4dc4p/haskell-shell#ghc94`
 
-Or, as 9.4 is the default:
+## GHC 9.6
+`nix develop m4dc4p/haskell-shell#ghc96` 
+
+Or, as 9.6 is the default:
 
 `nix develop m4dc4p/haskell-shell`
 
-
-## GHC 9.6
-`nix develop m4dc4p/haskell-shell#ghc96` 
+## GHC 9.8
+`nix develop m4dc4p/haskell-shell#ghc98` 

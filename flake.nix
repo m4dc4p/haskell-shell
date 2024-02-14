@@ -1,7 +1,7 @@
 {
   description = "Simple Haskell Shell for GHC 9.2, 9.4 and 9.6";
 
-  inputs.nixpkgs.url = "nixpkgs/release-23.05";
+  inputs.nixpkgs.url = "nixpkgs/release-23.11";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   nixConfig = {
@@ -39,16 +39,18 @@
                 buildInputs = [ hs.cabal-install cabal2nix ghcid ];
                 withHoogle = false;
               });
-          shell92 = mkShell systemPkgs.haskell.packages.ghc927;
-          shell94 = mkShell systemPkgs.haskell.packages.ghc947;
-          shell96 = mkShell systemPkgs.haskell.packages.ghc962;
+          shell92 = mkShell systemPkgs.haskell.packages.ghc92;
+          shell94 = mkShell systemPkgs.haskell.packages.ghc94;
+          shell96 = mkShell systemPkgs.haskell.packages.ghc96;
+          shell98 = mkShell systemPkgs.haskell.packages.ghc98;
         in 
           { 
-            devShell = shell94;
-            devShells.default = shell94;
+            devShell = shell96;
+            devShells.default = shell96;
             devShells.ghc92 = shell92;
             devShells.ghc94 = shell94;
             devShells.ghc96 = shell96;
+            devShells.ghc98 = shell98;
           }
       );
 }
